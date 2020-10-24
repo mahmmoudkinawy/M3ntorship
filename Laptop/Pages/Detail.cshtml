@@ -1,0 +1,44 @@
+﻿@page   "{laptopId:int}"
+@model Laptop.Pages.Laptops.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h2>@Model.LaptopObjects.Name</h2>
+
+<div>
+    Id : @Model.LaptopObjects.Id
+</div>
+
+<div>
+    Color : @Model.LaptopObjects.Color
+</div>
+
+<div>
+    Model : @Model.LaptopObjects.Model
+</div>
+
+<div>
+    Generation : @Model.LaptopObjects.Generation
+</div>
+
+<div>
+    Hard Disk : @Model.LaptopObjects.HardDisk
+</div>
+
+<div>
+    Ram : @Model.LaptopObjects.Ram
+</div>
+
+<br />
+
+@if (Model.Message != null)
+{
+    <div class="alert alert-info">
+        @Model.Message
+    </div>
+}
+
+<br />
+
+<a asp-page="./List" class="btn btn-dark">All Laptops</a>

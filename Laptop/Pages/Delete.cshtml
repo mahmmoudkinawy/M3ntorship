@@ -1,0 +1,18 @@
+﻿@page   "{laptopId:int}"
+@model Laptop.Pages.Shared.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete!</h2>
+
+<div class="alert alert-danger">
+    Are you sure you want delete @Model.LaptopObjects.Name ?
+</div>
+
+<form method="post">
+
+    <button class="btn btn-danger" type="submit">Yes!</button>
+    <a class="btn btn-primary" asp-page="./List">Cancel</a>
+
+</form>

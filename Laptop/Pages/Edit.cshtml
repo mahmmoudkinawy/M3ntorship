@@ -1,0 +1,55 @@
+﻿@page   "{laptopId:int?}"
+@model Laptop.Pages.Laptops.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<form method="post">
+
+    <input type="hidden" asp-for="LaptopObjects.Id" />
+
+    <div class="form-group">
+        <label asp-for="LaptopObjects.Name"></label>
+        <input asp-for="LaptopObjects.Name" class="form-control" />
+        <span class="text-danger" asp-validation-for="LaptopObjects.Name"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LaptopObjects.Color"></label>
+        <input asp-for="LaptopObjects.Color" class="form-control" />
+        <span class="text-danger" asp-validation-for="LaptopObjects.Color"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LaptopObjects.Model"></label>
+        <input asp-for="LaptopObjects.Model" class="form-control" />
+        <span class="text-danger" asp-validation-for="LaptopObjects.Model"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LaptopObjects.Generation"></label>
+        <input asp-for="LaptopObjects.Generation" class="form-control" />
+        <span class="text-danger" asp-validation-for="LaptopObjects.Generation"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LaptopObjects.HardDisk"></label>
+        <input asp-for="LaptopObjects.HardDisk" class="form-control" />
+        <span class="text-danger" asp-validation-for="LaptopObjects.HardDisk"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LaptopObjects.Ram"></label>
+        <input asp-for="LaptopObjects.Ram" class="form-control" />
+        <span class="text-danger" asp-validation-for="LaptopObjects.Ram"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <input type="reset" class="btn btn-primary"/>
+    <a class="btn btn-primary" asp-page="./List" data-inline="true">Cancel</a>
+
+</form>
+
+
+
